@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+html,body{
+    background: linear-gradient(315deg, #fff, #d7e1ec);
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+.wrapper .icon{
+    margin: 0 30px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icon span{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    /* border: 2px solid black; */
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+}
+
+.wrapper .icon span i{
+    font-size: 25px;
+    line-height: 60px;
+}
+
+.wrapper .icon:hover span{
+    color: #fff;
+}
+
+.wrapper .icon .tooltip{
+    position: absolute;
+    top: 0px;
+    border-radius: 25px;
+    background: #fff;
+    color: #fff;
+    text-align: center;
+    padding: 4px 10px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip{
+    top: 90px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.wrapper .icon .tooltip::after{
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    /* border: 2px solid black;     */
+    /* background: #fff; */
+    bottom: -5px;
+    right: 50%;
+    transform: translateX(50%)rotate(45deg);
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip{
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::after{
+    background-color: purple;
+}
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::after{
+    background-color: rgb(159, 10, 10);
+}
+.wrapper .twitter:hover span,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::after{
+    background-color: rgb(114, 175, 199);
+}
+.wrapper .github:hover span,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::after{
+    background-color: rgb(47, 43, 43);
+}
